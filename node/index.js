@@ -1,0 +1,2 @@
+const conectar =  require('./conexion')
+
