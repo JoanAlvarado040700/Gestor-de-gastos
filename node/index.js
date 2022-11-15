@@ -1,4 +1,4 @@
-const conectar =  require('./conexion')
+
 const express = require('express')
 const movRouter = require('./router/movimientos')
 const app = express()

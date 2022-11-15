@@ -1,6 +1,6 @@
-const conexion =require('.conexion')
+const conexion = require('../conexion')
 
-const todos = (req, res)=> 
+const todos = (res)=> 
 {
 
     const sql = 'select * from movimiento'
@@ -29,9 +29,9 @@ const buscar = (req, _res)=>{
 
 }
 
-const registro = (req, res)=>{
+const registrar = (req, res)=>{
     const sql = 'insert into movimiento set ?'
-    conexion.query(sql, req.body, function(err,result){
+    conexion.query(sql, req.body, function(err){
         if (err){
             res.send('Ha ocurrido un error'+err)
         }else{
@@ -67,5 +67,5 @@ const eliminar = (req, res)=>{
 }
 
 module.exports ={
-    todos, buscar, registro, modificar,eliminar
+    todos, buscar, registrar, modificar,eliminar
 }
